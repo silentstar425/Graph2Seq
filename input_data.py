@@ -29,32 +29,20 @@ def load_ast(ast_dir, vocab_file, offset=0):           # load the saved AST and 
     for i in range(len(vocab_list)):
         word2idx[vocab_list[i]] = i
     Graphs = {}
-    Graphs_p = {}
-    Graphs_n = {}
     for file in os.listdir(ast_dir):
         ast = torch.load(ast_dir + '/' + file)
-        ast_p = graph_aug(ast,vocab_list)
-        ast_n = graph_aug(ast,vocab_list,pos=False)
         adj = defaultdict(list)
         x = np.zeros((len(ast), len(vocab)))
-        x_p = np.zeros((len(ast), len(vocab)))
-        x_n = np.zeros((len(ast), len(vocab)))
         for i in range(len(ast)):
             node = ast[i]
             x[i][word2idx[node['type']]] = 1
-            node_n = ast_n[i]
-            x_n[i][word2idx[node_n['type']]] = 1
-            node_p = ast_p[i]
-            x_p[i][word2idx[node_p['type']]] = 1
             if 'children' in node:
                 for child in node['children']:
                     adj[i].append(child)
                     adj[child].append(i)
-        Graphs[int(file[:3])] = Data(x, adj)
-        Graphs_p[int(file[:3])] = Data(x_p, adj)
-        Graphs_n[int(file[:3])] = Data(x_n, adj)
+        Graphs[file] = Data(x, adj)
 
-    return Graphs,Graphs_p,Graphs_n
+    return Graphs
 
 
 def reshape(ast, node_idx=0):

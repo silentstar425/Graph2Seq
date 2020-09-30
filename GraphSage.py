@@ -8,8 +8,11 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.nn import init
 from input_data import load_ast
+from tqdm import tqdm
+from time import sleep
 from random import choice
 from collections import namedtuple, defaultdict
+from rnn_encoder_decoder.modules.Decoder import Decoder
 
 
 # # 邻居采样
@@ -176,7 +179,7 @@ class ReadOut(nn.Module):
                                   nn.Sigmoid())
         self.aggr = nn.Sequential(nn.Linear(input_dim, input_dim),
                                   nn.ReLU(),
-                                  nn.Linear(input_dim, 20))
+                                  nn.Linear(input_dim, 1000))
 
     def forward(self, node_features):
         x = self.mlp(node_features)
@@ -259,28 +262,40 @@ java_ast_dir = 'lc-java'
 java_vocab_file = 'lc-java-vocab.pth'
 INPUT_DIM = 76  # 输入维度 (节点/样本特征向量维度)
 # Note: 采样的邻居阶数需要与GCN的层数保持一致
-HIDDEN_DIM = [128, 10]  # 隐藏单元节点数  两层
+HIDDEN_DIM = [128, 100]  # 隐藏单元节点数  两层
 NUM_NEIGHBORS_LIST = [10, 10]  # 每阶/每层采样邻居的节点数
 assert len(HIDDEN_DIM) == len(NUM_NEIGHBORS_LIST)
-py_data,py_data_p,py_data_n = load_ast(py_ast_dir, py_vocab_file)
-java_data,java_data_p,java_data_n = load_ast(java_ast_dir, java_vocab_file)
+py_data = load_ast(py_ast_dir, py_vocab_file)
+# java_data,java_data_p,java_data_n = load_ast(java_ast_dir, java_vocab_file)
 data = []
-for name in py_data.keys():
-    data.append(['py_'+str(name), py_data[name],py_data_p[name],py_data_n[name]])
-for name in java_data.keys():
+vocab = {'SOS':0,'EOS':1}
+counter = defaultdict(int)
+for name,graph in py_data.items():
+    name = name[:-7].split('_')[1:]
+    data.append([name, graph])
+    for word in name:
+        counter[word] += 1
+        if word not in vocab:
+            vocab[word] = len(vocab)
+counter = sorted(counter.items(),key=lambda x:x[1])
+'''for name in java_data.keys():
     data.append(['java_'+str(name), java_data[name], java_data_p[name], java_data_n[name]])
+'''
 
-BTACH_SIZE = 16  # 批处理大小
-EPOCHS = 5
+BATCH_SIZE = 20  # 批处理大小
+EPOCHS = 300
 NUM_BATCH_PER_EPOCH = 20  # 每个epoch循环的批次数
-LEARNING_RATE = 0.005  # 学习率
+LEARNING_RATE = 0.01  # 学习率
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = GraphSage(input_dim=INPUT_DIM, hidden_dim=HIDDEN_DIM,
                      num_neighbors_list=NUM_NEIGHBORS_LIST).to(DEVICE)
+dcr = Decoder(len(vocab)).to(DEVICE)
 # print(model)
-criterion = nn.TripletMarginLoss().to(DEVICE)  # 多分类交叉熵损失函数
-optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE, weight_decay=5e-4)  # Adam优化器\
+criterion = nn.CrossEntropyLoss()  # 多分类交叉熵损失函数
+optimizer = optim.Adam(list(model.parameters())+list(dcr.parameters()), lr=LEARNING_RATE, weight_decay=5e-4)  # Adam优化器\
+norm = nn.BatchNorm1d(1000).to(DEVICE)
+
 
 import random
 
@@ -294,7 +309,10 @@ def train(model):
     model.train()  # 训练模式
     for e in range(EPOCHS):
         random.shuffle(train_data)
-        for _,d,d_p,d_n in train_data:
+        output = []
+        labels = []
+        for i in range(BATCH_SIZE):
+            name,d = choice(train_data)
             try:
                 # data = CoraData().data #获取预处理数据
                 x = d.x / d.x.sum(1, keepdims=True)  # 归一化数据，使得每一行和为1
@@ -307,35 +325,33 @@ def train(model):
                 x = model(batch_sampling_x)    # 获取模型的输出 (BATCH_SIZE,hidden_size[-1]=7)
                 # loss = criterion(batch_train_logits, batch_src_label)
 
-                x_p = d_p.x / d_p.x.sum(1, keepdims=True)
-                batch_src_index = np.arange(len(x_p))
-                batch_sampling_result = multihop_sampling(batch_src_index, NUM_NEIGHBORS_LIST,
-                                                          d.adjacency_dict)
-                batch_sampling_x = [torch.from_numpy(x_p[idx]).float().to(DEVICE) for idx in
-                                    batch_sampling_result]
-                x_p = model(batch_sampling_x)
+                output.append(x)
+                labels.append(name)
 
-                x_n = d_n.x / d_n.x.sum(1, keepdims=True)
-                batch_src_index = np.arange(len(x_n))
-                batch_sampling_result = multihop_sampling(batch_src_index, NUM_NEIGHBORS_LIST,
-                                                          d.adjacency_dict)
-                batch_sampling_x = [torch.from_numpy(x_n[idx]).float().to(DEVICE) for idx in
-                                    batch_sampling_result]
-                x_n = model(batch_sampling_x)
-
-                if e == EPOCHS-1:
-                    f.write('\t'.join(map(str, x.detach().cpu().numpy().tolist()))+'\n')
-                    _f.write(_+'\n')
-                x = x.unsqueeze(0)
-                x_p = x_p.unsqueeze(0)
-                x_n = x_n.unsqueeze(0)
-                loss = criterion(x, x_p, x_n).to(DEVICE)
-                print("Epoch {:03d} Loss: {:.4f}".format(e, loss.item()))
-                optimizer.zero_grad()  # 清空梯度
-                loss.backward()  # 反向传播计算参数的梯度
-                optimizer.step()  # 使用优化方法进行梯度更新
             except ValueError:
                 pass
+
+        output = torch.stack(output).to(DEVICE)
+        output = norm(output)
+
+        loss = 0
+
+        for i in range(len(labels)):
+            x = output[i].unsqueeze(0).unsqueeze(0)
+            input = torch.LongTensor([0]).to(DEVICE)
+            name = labels[i]
+            for word in name + ['EOS']:
+                word = torch.LongTensor([vocab[word]]).to(DEVICE)
+                _, softmax, x = dcr(input, x)
+                loss += criterion(softmax, word)
+                _word = np.argmax(softmax.data.cpu().numpy())
+                input = word
+
+        optimizer.zero_grad()  # 清空梯度
+        loss.backward()  # 反向传播计算参数的梯度
+        optimizer.step()  # 使用优化方法进行梯度更新
+
+        print("Epoch {:03d} Loss: {:.4f}".format(e, loss/20))
         # _test()  # 每一epoch做一次测试
     f.close()
 
