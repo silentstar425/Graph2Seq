@@ -87,10 +87,7 @@ class NeighborAggregator(nn.Module):
         else:
             raise ValueError("Unknown aggr type, expected sum, max, or mean, but got {}"
                              .format(self.aggr_method))
-        if aggr_neighbor.shape[1] != 139:
-            neighbor_hidden = torch.matmul(aggr_neighbor, self.weight)  # 先聚合再做线性变换
-        else:
-            neighbor_hidden = torch.matmul(aggr_neighbor, self._weight)
+        neighbor_hidden = torch.matmul(aggr_neighbor, self.weight)  # 先聚合再做线性变换
         if self.use_bias:
             neighbor_hidden += self.bias
 
@@ -129,7 +126,6 @@ class SageGCN(nn.Module):
         self.aggregator = NeighborAggregator(input_dim, hidden_dim,
                                              aggr_method=aggr_neighbor_method)
         self.weight = nn.Parameter(torch.Tensor(input_dim, hidden_dim))
-        self._weight = nn.Parameter(torch.Tensor(139, hidden_dim))
 
         self.reset_parameters()  # 自定义参数初始化方式
 
@@ -140,10 +136,7 @@ class SageGCN(nn.Module):
         # 得到邻居节点的聚合特征(经过线性变换)
         neighbor_hidden = self.aggregator(neighbor_node_features)
         # 对中心节点的特征作线性变换
-        if src_node_features.shape[1] != 139:
-            self_hidden = torch.matmul(src_node_features, self.weight)
-        else:
-            self_hidden = torch.matmul(src_node_features, self._weight)
+        self_hidden = torch.matmul(src_node_features, self.weight)
 
         # 对中心节点的特征和邻居节点的聚合特征进行求和或拼接
         if self.aggr_hidden_method == "sum":
@@ -266,34 +259,42 @@ HIDDEN_DIM = [128, 100]  # 隐藏单元节点数  两层
 NUM_NEIGHBORS_LIST = [10, 10]  # 每阶/每层采样邻居的节点数
 assert len(HIDDEN_DIM) == len(NUM_NEIGHBORS_LIST)
 py_data = load_ast(py_ast_dir, py_vocab_file)
-# java_data,java_data_p,java_data_n = load_ast(java_ast_dir, java_vocab_file)
+java_data = load_ast(java_ast_dir, java_vocab_file)
 data = []
 vocab = {'SOS':0,'EOS':1}
 counter = defaultdict(int)
+idx = ['SOS','EOS']
 for name,graph in py_data.items():
-    name = name[:-7].split('_')[1:]
-    data.append([name, graph])
-    for word in name:
+    if name not in java_data:
+        continue
+    _name = name.split('_')[1:]
+    data.append([1, _name, graph])
+    data.append([0, _name, java_data[name]])
+    for word in _name:
         counter[word] += 1
         if word not in vocab:
             vocab[word] = len(vocab)
+            idx.append(word)
 counter = sorted(counter.items(),key=lambda x:x[1])
 '''for name in java_data.keys():
     data.append(['java_'+str(name), java_data[name], java_data_p[name], java_data_n[name]])
 '''
 
 BATCH_SIZE = 20  # 批处理大小
-EPOCHS = 300
+EPOCHS = 50
 NUM_BATCH_PER_EPOCH = 20  # 每个epoch循环的批次数
-LEARNING_RATE = 0.01  # 学习率
+LEARNING_RATE = 0.001  # 学习率
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-model = GraphSage(input_dim=INPUT_DIM, hidden_dim=HIDDEN_DIM,
+pmodel = GraphSage(input_dim=76, hidden_dim=HIDDEN_DIM,
+                     num_neighbors_list=NUM_NEIGHBORS_LIST).to(DEVICE)
+jmodel = GraphSage(input_dim=139, hidden_dim=HIDDEN_DIM,
                      num_neighbors_list=NUM_NEIGHBORS_LIST).to(DEVICE)
 dcr = Decoder(len(vocab)).to(DEVICE)
 # print(model)
 criterion = nn.CrossEntropyLoss()  # 多分类交叉熵损失函数
-optimizer = optim.Adam(list(model.parameters())+list(dcr.parameters()), lr=LEARNING_RATE, weight_decay=5e-4)  # Adam优化器\
+optimizer = optim.Adam(list(jmodel.parameters())+list(pmodel.parameters())+list(dcr.parameters()),
+                       lr=LEARNING_RATE, weight_decay=5e-4)  # Adam优化器\
 norm = nn.BatchNorm1d(1000).to(DEVICE)
 
 
@@ -301,18 +302,18 @@ import random
 
 #random.shuffle(data)
 
-train_data = data
+train_data = data[:len(data)*3//4]
+test_data = data[len(data)*3//4:]
 
-def train(model):
-    f = open('emb.csv','w')
-    _f = open('label.csv', 'w')
-    model.train()  # 训练模式
+def train(pmodel,jmodel):
+    pmodel.train()  # 训练模式
+    jmodel.train()
     for e in range(EPOCHS):
         random.shuffle(train_data)
-        output = []
-        labels = []
-        for i in range(BATCH_SIZE):
-            name,d = choice(train_data)
+        total_loss = 0
+        tmp_res = []
+        for l,name,d in tqdm(train_data):
+            model = pmodel if l else jmodel
             try:
                 # data = CoraData().data #获取预处理数据
                 x = d.x / d.x.sum(1, keepdims=True)  # 归一化数据，使得每一行和为1
@@ -325,35 +326,37 @@ def train(model):
                 x = model(batch_sampling_x)    # 获取模型的输出 (BATCH_SIZE,hidden_size[-1]=7)
                 # loss = criterion(batch_train_logits, batch_src_label)
 
-                output.append(x)
-                labels.append(name)
+                x = x.unsqueeze(0).unsqueeze(0)
+                input = torch.LongTensor([0]).to(DEVICE)
+                loss = 0
+                pred = []
+                for word in name + ['EOS']:
+                    word = torch.LongTensor([vocab[word]]).to(DEVICE)
+                    _, softmax, x = dcr(input, x)
+                    loss += criterion(softmax, word)
+                    _word = np.argmax(softmax.data.cpu().numpy())
+                    input = word
+                    pred.append(idx[_word])
+
+                if not e%10:
+                    tmp_res.append(["{:13}".format('target:')+' '.join(name+['EOS']),"{:13}".format('prediction:')+' '.join(pred)])
+
+
+                loss.backward()  # 反向传播计算参数的梯度
+                optimizer.step()  # 使用优化方法进行梯度更新
+
+                total_loss += float(loss)
 
             except ValueError:
                 pass
+        print("Epoch {:03d} Loss: {:.4f}".format(e, total_loss / len(train_data)))
 
-        output = torch.stack(output).to(DEVICE)
-        output = norm(output)
-
-        loss = 0
-
-        for i in range(len(labels)):
-            x = output[i].unsqueeze(0).unsqueeze(0)
-            input = torch.LongTensor([0]).to(DEVICE)
-            name = labels[i]
-            for word in name + ['EOS']:
-                word = torch.LongTensor([vocab[word]]).to(DEVICE)
-                _, softmax, x = dcr(input, x)
-                loss += criterion(softmax, word)
-                _word = np.argmax(softmax.data.cpu().numpy())
-                input = word
-
-        optimizer.zero_grad()  # 清空梯度
-        loss.backward()  # 反向传播计算参数的梯度
-        optimizer.step()  # 使用优化方法进行梯度更新
-
-        print("Epoch {:03d} Loss: {:.4f}".format(e, loss/20))
+        sleep(1)
+        if not e%10:
+            for target,pred in tmp_res:
+                print(target)
+                print(pred)
         # _test()  # 每一epoch做一次测试
-    f.close()
 
 
 
@@ -397,4 +400,4 @@ def _test():
 
 
 if __name__ == '__main__':
-    train(model)
+    train(pmodel,jmodel)
