@@ -281,7 +281,7 @@ counter = sorted(counter.items(),key=lambda x:x[1])
 '''
 
 BATCH_SIZE = 20  # 批处理大小
-EPOCHS = 50
+EPOCHS = 20
 NUM_BATCH_PER_EPOCH = 20  # 每个epoch循环的批次数
 LEARNING_RATE = 0.001  # 学习率
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -338,10 +338,10 @@ def train(pmodel,jmodel):
                     input = word
                     pred.append(idx[_word])
 
-                if not e%10:
+                if not (e+1)%10:
                     tmp_res.append(["{:13}".format('target:')+' '.join(name+['EOS']),"{:13}".format('prediction:')+' '.join(pred)])
 
-
+                optimizer.zero_grad()
                 loss.backward()  # 反向传播计算参数的梯度
                 optimizer.step()  # 使用优化方法进行梯度更新
 
@@ -351,13 +351,22 @@ def train(pmodel,jmodel):
                 pass
         print("Epoch {:03d} Loss: {:.4f}".format(e, total_loss / len(train_data)))
 
-        sleep(1)
         if not e%10:
             for target,pred in tmp_res:
                 print(target)
                 print(pred)
         # _test()  # 每一epoch做一次测试
 
+    for l, name, d in data:
+        model = pmodel if l else jmodel
+        x = d.x / d.x.sum(1, keepdims=True)
+        batch_src_index = np.arange(len(x))
+        batch_sampling_result = multihop_sampling(batch_src_index, NUM_NEIGHBORS_LIST,
+                                                  d.adjacency_dict)
+        batch_sampling_x = [torch.from_numpy(x[idx]).float().to(DEVICE) for idx in
+                            batch_sampling_result]
+        x = model(batch_sampling_x)
+        print(' '.join(name)+['j','p'][l], x.detach().cpu().tolist())
 
 
 def _test():

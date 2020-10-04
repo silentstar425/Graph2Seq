@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d544cdb5-34c6-4acf-9c37-347d77e240c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/GraphSage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphSage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +15,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GraphSage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285">
-              <caret line="311" column="34" lean-forward="true" selection-start-line="311" selection-start-column="34" selection-end-line="311" selection-end-column="34" />
+            <state relative-caret-position="-1627">
+              <caret line="283" column="10" selection-start-line="283" selection-start-column="10" selection-end-line="283" selection-end-column="10" />
               <folding>
                 <element signature="e#45#57#0" expanded="true" />
-                <element signature="e#359#848#0" />
-                <element signature="e#918#1500#0" />
-                <element signature="e#8698#9584#1" />
-                <element signature="e#9594#9620#1" />
               </folding>
             </state>
           </provider>
@@ -32,10 +27,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="196">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/RNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/input_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -67,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="2596">
               <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
               <folding>
                 <element signature="e#88#116#0" expanded="true" />
@@ -99,6 +106,7 @@
       <find>cuda</find>
       <find>two</find>
       <find>two sum</find>
+      <find>norm</find>
     </findStrings>
     <replaceStrings>
       <replace>py_model</replace>
@@ -157,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,13 +176,12 @@
             <path>
               <item name="GraphSage" type="b2602c69:ProjectViewProjectNode" />
               <item name="GraphSage" type="462c0819:PsiDirectoryNode" />
-              <item name="lc-python" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn_encoder_decoder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GraphSage">
+  <component name="RunManager" selected="Python.RNN">
     <configuration name="GraphSage" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
       <module name="GraphSage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,6 +223,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GraphSage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RNN" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+      <module name="GraphSage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rnn_encoder_decoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn_encoder_decoder/RNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -328,36 +357,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in GraphSage.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="GraphSage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/GraphSage.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.GraphSage" />
       <item itemvalue="Python.__main__" />
       <item itemvalue="Python.draw_tree" />
       <item itemvalue="Python.input_data" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python tests.pytest in GraphSage.py" />
+      <item itemvalue="Python.RNN" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RNN" />
         <item itemvalue="Python.input_data" />
         <item itemvalue="Python.draw_tree" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.__main__" />
-        <item itemvalue="Python tests.pytest in GraphSage.py" />
       </list>
     </recent_temporary>
   </component>
@@ -381,6 +395,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957806" visible="true" weight="0.25165126" />
       <window_info id="Structure" order="1" sideWeight="0.5042194" side_tool="true" weight="0.1327609" />
@@ -442,7 +457,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/leetcode-master/modify/python3/004_Median_of_Two_Sorted_Arrays.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/003_Longest_Substring_Without_Repeating_Characters.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/002_Add_Two_Numbers.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/001_Two_Sum.py" />
@@ -576,16 +590,6 @@
         <state relative-caret-position="-8448" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
-          <folding>
-            <element signature="e#88#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/site-packages/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -614,12 +618,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
+    <entry file="file://$PROJECT_DIR$/draw_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="2596">
+          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#88#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/RNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -633,26 +657,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
+    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="196">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphSage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="311" column="34" lean-forward="true" selection-start-line="311" selection-start-column="34" selection-end-line="311" selection-end-column="34" />
+        <state relative-caret-position="-1627">
+          <caret line="283" column="10" selection-start-line="283" selection-start-column="10" selection-end-line="283" selection-end-column="10" />
           <folding>
             <element signature="e#45#57#0" expanded="true" />
-            <element signature="e#359#848#0" />
-            <element signature="e#918#1500#0" />
-            <element signature="e#8698#9584#1" />
-            <element signature="e#9594#9620#1" />
           </folding>
         </state>
       </provider>
