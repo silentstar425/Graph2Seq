@@ -5,9 +5,12 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphSage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphSage.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/emb.csv" beforeDir="false" afterPath="$PROJECT_DIR$/emb.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/label.csv" beforeDir="false" afterPath="$PROJECT_DIR$/label.csv" afterDir="false" />
+=======
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GraphSage.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="284">
               <caret line="331" column="20" lean-forward="true" selection-start-line="331" selection-start-column="20" selection-end-line="331" selection-end-column="20" />
               <folding>
@@ -30,6 +34,12 @@
                 <element signature="e#3473#5985#0" />
                 <element signature="e#8698#9584#1" />
                 <element signature="e#9594#9620#1" />
+=======
+            <state relative-caret-position="-1627">
+              <caret line="283" column="10" selection-start-line="283" selection-start-column="10" selection-end-line="283" selection-end-column="10" />
+              <folding>
+                <element signature="e#45#57#0" expanded="true" />
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
               </folding>
             </state>
           </provider>
@@ -47,10 +57,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="64">
               <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+=======
+            <state relative-caret-position="196">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/RNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +97,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input_data.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state>
               <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+=======
+            <state relative-caret-position="80">
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -82,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="2596">
               <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
               <folding>
                 <element signature="e#88#116#0" expanded="true" />
@@ -112,6 +144,12 @@
       <find>adam</find>
       <find>name</find>
       <find>cuda</find>
+<<<<<<< HEAD
+=======
+      <find>two</find>
+      <find>two sum</find>
+      <find>norm</find>
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
     </findStrings>
     <replaceStrings>
       <replace>py_model</replace>
@@ -170,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,7 +219,7 @@
             <path>
               <item name="GraphSage" type="b2602c69:ProjectViewProjectNode" />
               <item name="GraphSage" type="462c0819:PsiDirectoryNode" />
-              <item name="lc-python" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn_encoder_decoder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GraphSage" type="b2602c69:ProjectViewProjectNode" />
@@ -197,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GraphSage">
+  <component name="RunManager" selected="Python.RNN">
     <configuration name="GraphSage" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
       <module name="GraphSage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,6 +277,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GraphSage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RNN" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+      <module name="GraphSage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rnn_encoder_decoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn_encoder_decoder/RNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,36 +411,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in GraphSage.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="GraphSage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/GraphSage.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.GraphSage" />
       <item itemvalue="Python.__main__" />
       <item itemvalue="Python.draw_tree" />
       <item itemvalue="Python.input_data" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python tests.pytest in GraphSage.py" />
+      <item itemvalue="Python.RNN" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RNN" />
         <item itemvalue="Python.input_data" />
         <item itemvalue="Python.draw_tree" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.__main__" />
-        <item itemvalue="Python tests.pytest in GraphSage.py" />
       </list>
     </recent_temporary>
   </component>
@@ -462,7 +506,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/leetcode-master/modify/python3/004_Median_of_Two_Sorted_Arrays.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/003_Longest_Substring_Without_Repeating_Characters.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/002_Add_Two_Numbers.py" />
     <entry file="file://$USER_HOME$/leetcode-master/modify/python3/001_Two_Sum.py" />
@@ -596,6 +639,7 @@
         <state relative-caret-position="-8448" />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/draw_tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -607,6 +651,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input_data.py">
+=======
+    <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/site-packages/torch/nn/functional.py">
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
@@ -642,6 +689,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/site-packages/torch/nn/modules/loss.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -653,18 +701,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="549" selection-start-line="549" selection-end-line="549" />
+=======
+    <entry file="file://$PROJECT_DIR$/draw_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2596">
+          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+          <folding>
+            <element signature="e#88#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/RNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="308">
           <caret line="311" selection-start-line="311" selection-end-line="311" />
+=======
+        <state relative-caret-position="80">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphSage.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="284">
           <caret line="331" column="20" lean-forward="true" selection-start-line="331" selection-start-column="20" selection-end-line="331" selection-end-column="20" />
           <folding>
@@ -675,6 +770,12 @@
             <element signature="e#3473#5985#0" />
             <element signature="e#8698#9584#1" />
             <element signature="e#9594#9620#1" />
+=======
+        <state relative-caret-position="-1627">
+          <caret line="283" column="10" selection-start-line="283" selection-start-column="10" selection-end-line="283" selection-end-column="10" />
+          <folding>
+            <element signature="e#45#57#0" expanded="true" />
+>>>>>>> 734f3bc... seperate model for python and java. added training result display
           </folding>
         </state>
       </provider>
