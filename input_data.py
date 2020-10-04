@@ -40,7 +40,7 @@ def load_ast(ast_dir, vocab_file, offset=0):           # load the saved AST and 
                 for child in node['children']:
                     adj[i].append(child)
                     adj[child].append(i)
-        Graphs[file] = Data(x, adj)
+        Graphs[file.split('.')[0]] = Data(x, adj)
 
     return Graphs
 
