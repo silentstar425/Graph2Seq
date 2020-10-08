@@ -1,39 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@silentstar425
-Learn Git and GitHub without any code!
-
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-silentstar425 /
-GraphSage
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-GraphSage/.idea/workspace.xml
-@silentstar425
-silentstar425 seperate model for python and java. added training result display
-Latest commit 734f3bc 35 minutes ago
-History
-1 contributor
-681 lines (681 sloc) 32.2 KB
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
@@ -715,18 +679,3 @@ History
     </entry>
   </component>
 </project>
-
-    © 2020 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-

@@ -269,7 +269,7 @@ for name,graph in py_data.items():
         continue
     _name = name.split('_')[1:]
     data.append([1, _name, graph])
-    data.append([0, _name, java_data[name]])
+    # data.append([0, _name, java_data[name]])
     for word in _name:
         counter[word] += 1
         if word not in vocab:
@@ -281,7 +281,7 @@ counter = sorted(counter.items(),key=lambda x:x[1])
 '''
 
 BATCH_SIZE = 20  # 批处理大小
-EPOCHS = 20
+EPOCHS = 200
 NUM_BATCH_PER_EPOCH = 20  # 每个epoch循环的批次数
 LEARNING_RATE = 0.001  # 学习率
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -335,7 +335,7 @@ def train(pmodel,jmodel):
                     _, softmax, x = dcr(input, x)
                     loss += criterion(softmax, word)
                     _word = np.argmax(softmax.data.cpu().numpy())
-                    input = word
+                    input = torch.LongTensor([_word]).to(DEVICE)
                     pred.append(idx[_word])
 
                 if not (e+1)%10:
@@ -351,7 +351,7 @@ def train(pmodel,jmodel):
                 pass
         print("Epoch {:03d} Loss: {:.4f}".format(e, total_loss / len(train_data)))
 
-        if not e%10:
+        if tmp_res:
             for target,pred in tmp_res:
                 print(target)
                 print(pred)
