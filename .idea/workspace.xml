@@ -4,21 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/models.py" line="80" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d544cdb5-34c6-4acf-9c37-347d77e240c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphSage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphSage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emb.csv" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/label.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_java..png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_java.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_java.pth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_py..png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_py.pth" beforeDir="false" />
-    </list>
+    <list default="true" id="d544cdb5-34c6-4acf-9c37-347d77e240c6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GraphSage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-              <folding>
-                <element signature="e#45#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1958">
+              <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -54,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="726">
               <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -66,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2442">
+            <state relative-caret-position="2486">
               <caret line="113" selection-start-line="113" selection-end-line="113" />
               <folding>
                 <element signature="e#88#116#0" expanded="true" />
@@ -193,8 +176,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="GraphSage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GraphSage" type="462c0819:PsiDirectoryNode" />
+              <item name="GIN-RNN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIN-RNN" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -378,11 +361,11 @@
     </configuration>
     <list>
       <item itemvalue="Python.GraphSage" />
+      <item itemvalue="Python.RNN" />
       <item itemvalue="Python.__main__" />
       <item itemvalue="Python.draw_tree" />
       <item itemvalue="Python.input_data" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.RNN" />
     </list>
     <recent_temporary>
       <list>
@@ -414,9 +397,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957806" visible="true" weight="0.25165126" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957806" visible="true" weight="0.25165126" />
       <window_info id="Structure" order="1" sideWeight="0.5042194" side_tool="true" weight="0.1327609" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -580,11 +562,8 @@
     <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/99018.py" />
     <entry file="file://$PROJECT_DIR$/GraphSage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-          <folding>
-            <element signature="e#45#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1958">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -600,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="726">
           <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -610,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draw_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2442">
+        <state relative-caret-position="2486">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
           <folding>
             <element signature="e#88#116#0" expanded="true" />
