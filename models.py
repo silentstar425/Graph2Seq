@@ -9,7 +9,6 @@ from rnn_encoder_decoder.modules.Decoder import Decoder
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-
 # # 邻居聚合
 class Aggregator(nn.Module):
     def __init__(self, input_dim,

@@ -27,7 +27,6 @@ def load_ast(ast_file, vocab, directed=False):           # load the saved AST an
     word2idx = {}
     for i in range(len(vocab_list)):
         word2idx[vocab_list[i]] = i
-    Graphs = {}
     ast = torch.load(ast_file)
     adj = [[0]*len(ast) for i in range(len(ast))]
     x = []
