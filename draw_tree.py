@@ -108,16 +108,11 @@ if __name__=='__main__':
                           'hyper': 'soft'}},
                        'pre': {'soft': {}}}}}}}}
     '''
-
-    file_py = os.listdir('lc-python')
-    file_java = os.listdir('lc-java')
-
     # py = torch.load('lc-python/'+file_py[0])
     def draw(file):
         graph = torch.load(file)
-        _,graph = reshape_l(graph)
+        graph = reshape_d(graph)
         plot_model(graph, file[:-3])
 
 
-    draw('test_java.pth')
-    draw('test_py.pth')
+    draw('003_Longest_Substring_Without_Repeating_Characters.py.pth')

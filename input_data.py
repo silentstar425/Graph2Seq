@@ -21,28 +21,26 @@ def format_data(ASTS, word2idx):
     return data
 
 
-def load_ast(ast_dir, vocab_file, offset=0):           # load the saved AST and vocabulary of code blocks                                              # load generated ast
-    Data = namedtuple('Data', ['x', 'adjacency_dict'])
-    vocab = torch.load(vocab_file)     # arrange index to words
+def load_ast(ast_file, vocab, directed=False):           # load the saved AST and vocabulary of code blocks                                              # load generated ast
+    Data = namedtuple('Data', ['x', 'adjlist'])
     vocab_list = sorted(vocab.keys(), key=lambda d: vocab[d])   # sort the vocabulary list by appearance counts
     word2idx = {}
     for i in range(len(vocab_list)):
         word2idx[vocab_list[i]] = i
     Graphs = {}
-    for file in os.listdir(ast_dir):
-        ast = torch.load(ast_dir + '/' + file)
-        adj = defaultdict(list)
-        x = np.zeros((len(ast), len(vocab)))
-        for i in range(len(ast)):
-            node = ast[i]
-            x[i][word2idx[node['type']]] = 1
-            if 'children' in node:
-                for child in node['children']:
-                    adj[i].append(child)
-                    adj[child].append(i)
-        Graphs[file.split('.')[0]] = Data(x, adj)
+    ast = torch.load(ast_file)
+    adj = [[0]*len(ast) for i in range(len(ast))]
+    x = []
+    for i in range(len(ast)):
+        node = ast[i]
+        word=node['type']
+        x.append(word2idx[word] if word in word2idx else word2idx['UKN'])
+        if 'children' in node:
+            for child in node['children']:
+                adj[i][child] = 1
+                adj[child][i] = int(directed)
 
-    return Graphs
+    return Data(x, adj)
 
 
 def reshape(ast, node_idx=0):

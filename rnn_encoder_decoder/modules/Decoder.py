@@ -1,5 +1,7 @@
 import torch.nn as nn
+import torch
 from torch.autograd import Variable
+
 
 class Decoder(nn.Module):
     def __init__(self, input_size, embedding_size=500, hidden_size=1000):
@@ -10,8 +12,8 @@ class Decoder(nn.Module):
         self.softmax = nn.Softmax()
 
     def forward(self, input, hidden):
-        embedded = self.embedding(input).view(input.size(0), 1, -1)
-        output, hidden_state = self.gru(embedded, hidden)
+        embedded = self.embedding(input).view(1, 1, -1)
+        output, hidden_state = self.gru(embedded, hidden.view(1, 1, -1))
         output = output.view(output.size(0), output.size(2))
         linear = self.linear(output)
         # softmax = self.softmax(linear)
