@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d544cdb5-34c6-4acf-9c37-347d77e240c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emb.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIN_RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/GIN_RNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_tree.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model.pth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GIN_RNN.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="280">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <element signature="e#38#50#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw_tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+              <folding>
+                <element signature="e#88#116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,10 +50,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="393">
+              <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GIN_RNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <folding>
+                <element signature="e#38#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state relative-caret-position="160">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -65,10 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test()</find>
-      <find>data</find>
-      <find>仿造</find>
-      <find>model</find>
       <find>py_x</find>
       <find>py_data</find>
       <find>d</find>
@@ -92,6 +117,13 @@
       <find>function to read in a structure descriptor EOS</find>
       <find>multihop_sampling</find>
       <find>return common prefix length of ipv6 addresses a and b EOS</find>
+      <find>wtf</find>
+      <find>reverse</find>
+      <find>basic</find>
+      <find>result</find>
+      <find>Verifying</find>
+      <find>find</find>
+      <find>java_dir</find>
     </findStrings>
     <replaceStrings>
       <replace>py_model</replace>
@@ -109,63 +141,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/5292.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/28739.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/30001.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/30484.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/34083.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/34393.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/35018.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/36234.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/45129.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/45159.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/46054.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/46808.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/50364.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/50542.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/51422.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/52975.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/54867.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/60741.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/61166.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/61890.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/63810.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/64775.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/66046.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/67530.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/70831.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/75283.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/77825.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/78135.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/79694.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/82181.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/85462.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/85663.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/88196.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/86217.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/90759.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/93546.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/94022.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/96020.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/96195.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/97768.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/99018.py" />
-        <option value="$PROJECT_DIR$/draw_tree.py" />
-        <option value="$APPLICATION_HOME_DIR$/helpers/third_party/thriftpy/_shaded_thriftpy/_compat.py" />
-        <option value="$PROJECT_DIR$/GraphSage.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/GIN-RNN.py" />
-        <option value="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" />
-        <option value="$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/37358.py" />
-        <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/557_Reverse_Words_in_a_String_III.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/572_Subtree_of_Another_Tree.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/581_Shortest_Unsorted_Continuous_Subarray.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/582_Shortest_Unsorted_Continuous_Subarray_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/583_Shortest_Unsorted_Continuous_Subarray_III.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/582_Shortest_Unsorted_Continuous_Subarray_II - 副本.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/605_Can_Place_Flowers.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/617_Merge_Two_Binary_Trees.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/654_Maximum_Binary_Tree.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/655_Maximum_Binary_Tree_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/672_Second_Minimum_Node_In_a_Binary_Tree.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/680_Valid_Palindrome_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/695_Max_Area_of_Island.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/696_Max_Area_of_Island_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/700_Search_in_a_Binary_Search_Tree.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/701_Search_in_a_Binary_Search_Tree_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/709_To_Lower_Case.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/724_Find_Pivot_Index.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/733_Flood_Fill.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/734_Flood_Fill_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/744_Network_Delay_Time_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/784_Letter_Case_Permutation.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/804_Unique_Morse_Code_Words.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/836_Rectangle_Overlap.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/844_Backspace_String_Compare.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/867_Transpose_Matrix.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/876_Middle_of_the_Linked_List.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/877_Middle_of_the_Linked_List_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/904_Fruit_Into_Baskets.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/905_Fruit_Into_Baskets_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/907_Sort_Array_By_Parity_II.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/908_Sort_Array_By_Parity_III.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/929_Unique_Email_Addresses.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/933_Number_of_Recent_Calls.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/945_Minimum_Increment_to_Make_Array_Unique.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/953_Verifying_an_Alien_Dictionary.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/954_Array_of_Doubled_Pairs.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/962_Maximum_Width_Ramp.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1065_Fixed_Point_II.py" />
         <option value="$PROJECT_DIR$/input_data.py" />
+        <option value="$PROJECT_DIR$/testing.py" />
+        <option value="$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/001_Two_Sum.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/004_Median_of_Two_Sorted_Arrays.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/002_Add_Two_Numbers.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/tmp.py" />
+        <option value="$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1089_Duplicate_Zeros.py" />
+        <option value="$PROJECT_DIR$/draw_tree.py" />
         <option value="$PROJECT_DIR$/GIN_RNN.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="-240" />
+    <option name="y" value="-15" />
     <option name="width" value="1440" />
     <option name="height" value="775" />
   </component>
@@ -179,13 +211,19 @@
         <subPane>
           <expand>
             <path>
-              <item name="Graph2Seq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIN-RNN" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIN-RNN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graph2Seq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIN-RNN" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIN-RNN" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn_encoder_decoder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GIN-RNN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIN-RNN" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn_encoder_decoder" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,14 +234,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test_zone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\python3\U-tokyo\GraphSage" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python3\U-tokyo\GIN-RNN" />
       <recent name="E:\python3\U-tokyo\GraphSage" />
     </key>
   </component>
@@ -219,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GIN_RNN (1)">
+  <component name="RunManager" selected="Python.test">
     <configuration name="GIN-RNN (1)" type="PythonConfigurationType" factoryName="Python" singleton="false">
       <module name="Graph2Seq" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -283,48 +322,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="GraphSage" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
-      <module name="Graph2Seq" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GraphSage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RNN" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
-      <module name="Graph2Seq" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rnn_encoder_decoder" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn_encoder_decoder/RNN.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python" singleton="false">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -367,6 +364,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+      <module name="Graph2Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="Graph2Seq" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,22 +406,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+      <module name="Graph2Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.GIN_RNN" />
       <item itemvalue="Python.GIN-RNN (1)" />
-      <item itemvalue="Python.RNN" />
-      <item itemvalue="Python.draw_tree" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.GIN_RNN (1)" />
-      <item itemvalue="Python.GraphSage" />
+      <item itemvalue="Python.GIN_RNN" />
+      <item itemvalue="Python.draw_tree" />
+      <item itemvalue="Python.models" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.testing" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.GIN_RNN (1)" />
-        <item itemvalue="Python.GraphSage" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.GIN_RNN (1)" />
         <item itemvalue="Python.draw_tree" />
-        <item itemvalue="Python.RNN" />
+        <item itemvalue="Python.models" />
+        <item itemvalue="Python.testing" />
       </list>
     </recent_temporary>
   </component>
@@ -436,15 +475,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7687747" visible="true" weight="0.21070014" />
-      <window_info id="Structure" order="1" sideWeight="0.2312253" side_tool="true" visible="true" weight="0.21070014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.51182795" visible="true" weight="0.24768825" />
+      <window_info id="Structure" order="1" sideWeight="0.48817205" side_tool="true" weight="0.24768825" />
       <window_info id="Favorites" order="2" sideWeight="0.51476794" side_tool="true" weight="0.28599736" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28328612" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993395" weight="0.398017" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32577905" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993395" weight="0.34135976" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -457,6 +495,26 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.51182795" visible="true" weight="0.24768825" />
+      <window_info id="Structure" order="1" sideWeight="0.48817205" side_tool="true" visible="true" weight="0.24768825" />
+      <window_info id="Favorites" order="2" sideWeight="0.51476794" side_tool="true" weight="0.28599736" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32577905" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4993395" visible="true" weight="0.34135976" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.398017" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32577905" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
@@ -469,11 +527,6 @@
           <line>82</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/draw_tree.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -485,12 +538,22 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="train_data" language="Python" />
+        <watch expression="file" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>file</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>train_data</expression-string>
         <language-id>Python</language-id>
@@ -527,214 +590,307 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="setValue">
+      <expression>
+        <expression-string>tensor([[2.8043e-08, 2.1988e-07, 2.4178e-08, 9.1909e-14, 2.8043e-08, 7.0099e-08,
+         1.9350e-04, 2.8436e-09, 4.3255e-09, 7.0204e-08, 6.2705e-08, 5.7495e-08,
+         2.1851e-09, 3.0123e-08, 1.0787e-08, 4.3851e-08, 9.9908e-01, 1.0959e-08,
+         1.1895e-06, 9.9473e-10, 2.4146e-12, 2.8043e-08, 8.3112e-16, 1.6224e-07,
+         2.8043e-08, 2.8913e-08, 6.2449e-09, 2.8043e-08, 2.8043e-08, 2.3007e-08,
+         3.6639e-07, 3.1151e-08, 3.2705e-10, 1.0894e-07, 3.8225e-08, 1.1235e-08,
+         2.2060e-08, 6.4026e-09, 3.7084e-08, 1.9685e-09, 7.0507e-09, 1.9921e-08,
+         4.5473e-12, 1.1782e-08, 8.6829e-11, 1.0392e-09, 1.4305e-08, 6.6923e-09,
+         4.1807e-08, 4.1647e-08, 1.4491e-08, 4.5272e-15, 3.8683e-10, 4.2919e-11,
+         2.7286e-17, 4.7703e-08, 9.2867e-13, 5.1143e-09, 5.0208e-11, 6.2182e-08,
+         6.0226e-11, 9.3848e-08, 1.5913e-09, 4.1427e-12, 1.4557e-09, 3.8610e-08,
+         2.8043e-08, 2.8043e-08, 9.5136e-09, 1.2737e-08, 9.3949e-09, 4.4500e-08,
+         4.6025e-08,...</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/88196.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/86217.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/90759.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/93546.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/94022.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/96020.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/96195.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/97768.py" />
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/description generation/temp/99018.py" />
-    <entry file="file://$PROJECT_DIR$/003_Longest_Substring_Without_Repeating_Characters.py.pth" />
-    <entry file="file://$PROJECT_DIR$/draw_tree.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/937_Reorder_Log_Files.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/929_Unique_Email_Addresses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
-          <folding>
-            <element signature="e#88#116#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/collections/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/945_Minimum_Increment_to_Make_Array_Unique.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7282">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
+        <state relative-caret-position="572">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/946_Validate_Stack_Sequences.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/953_Verifying_an_Alien_Dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/962_Maximum_Width_Ramp.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/954_Array_of_Doubled_Pairs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/973_K_Closest_Points_to_Origin.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/977_Squares_of_a_Sorted_Array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1064_Fixed_Point.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1065_Fixed_Point_II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1108_Defanging_an_IP_Address.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1260_Shift_2D_Grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1337_The_K_Weakest_Rows_in_a_Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1365_How_Many_Numbers_Are_Smaller_Than_the_Current_Number.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/671_Second_Minimum_Node_In_a_Binary_Tree_II.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/672_Second_Minimum_Node_In_a_Binary_Tree.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/509_Fibonacci_Number.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/655_Maximum_Binary_Tree_II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/905_Fruit_Into_Baskets_II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/site-packages/torch/nn/modules/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
+        <state relative-caret-position="343">
           <caret line="549" selection-start-line="549" selection-end-line="549" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/site-packages/torch/autograd/__init__.py">
+    <entry file="file://$PROJECT_DIR$/703_Kth_Largest_Element_in_a_Stream.java.pth" />
+    <entry file="file://$PROJECT_DIR$/703_Kth_Largest_Element_in_a_Stream.py.pth" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/703_Kth_Largest_Element_in_a_Stream.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="374">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/third_party/thriftpy/_shaded_thriftpy/_compat.py">
+    <entry file="file://$PROJECT_DIR$/001_Two_Sum.java.pth" />
+    <entry file="file://$USER_HOME$/Downloads/javalang-0.9.2/javalang/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2750">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/javalang-0.9.2/javalang/ast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/479_Largest_Palindrome_Product.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="100" column="11" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/python3/001_Two_Sum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="132">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/python/002_Add_Two_Numbers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/python3/003_Longest_Substring_Without_Repeating_Characters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rnn_encoder_decoder/modules/Decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/35.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/python3/004_Median_of_Two_Sorted_Arrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="37" column="41" lean-forward="true" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/python38/Lib/codecs.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/001_Two_Sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/002_Add_Two_Numbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39885.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39888.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39915.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39906.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39891.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/33.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/39921.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/003_Longest_Substring_Without_Repeating_Characters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="132">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/4.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/005_Longest_Palindromic_Substring.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/7.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/8.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/9.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/30.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/29.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/27.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/25.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/24.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/22.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/15.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/14.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/11.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/10.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/13.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/6.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.pth">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/37358.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jupyter/meta learning/dataset/funcs3/12.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphSage.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/sample.py" />
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/007_Reverse_Integer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/1089_Duplicate_Zeros.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/tmp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="22">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/009_Palindrome_Number.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/004_Median_of_Two_Sorted_Arrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jupyter/leetcode-master/leetcode-master/lc-python/008_String_to_Integer_a_to_i.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.pth">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#88#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GIN_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="200">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
             <element signature="e#38#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

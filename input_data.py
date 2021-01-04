@@ -33,7 +33,7 @@ def load_ast(ast_file, vocab, directed=False):           # load the saved AST an
     for i in range(len(ast)):
         node = ast[i]
         word=node['type']
-        x.append(word2idx[word] if word in word2idx else word2idx['UKN'])
+        x.append(word2idx[word])
         if 'children' in node:
             for child in node['children']:
                 adj[i][child] = 1

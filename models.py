@@ -9,10 +9,11 @@ from rnn_encoder_decoder.modules.Decoder import Decoder
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
+
 # # 邻居聚合
 class Aggregator(nn.Module):
     def __init__(self, input_dim,
-                 use_bias=False, aggr_method="mean"):
+                 use_bias=True, aggr_method="mean"):
         """聚合节点邻居
         Args:
             input_dim: 输入特征的维度
@@ -27,7 +28,7 @@ class Aggregator(nn.Module):
         self.weight = nn.Parameter(torch.Tensor(2*input_dim, input_dim))
         self.activation = F.relu
         if self.use_bias:
-            self.bias = nn.Parameter(torch.Tensor(self.output_dim))
+            self.bias = nn.Parameter(torch.Tensor(self.input_dim))
         self.reset_parameters()  # 自定义参数初始化
 
     def reset_parameters(self):
@@ -80,11 +81,11 @@ class ReadOut(nn.Module):
 # # GraphSage网络
 class GIN(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim,
-                 layers):
+                 layers, shared_embedding):
         super(GIN, self).__init__()
         self.input_dim = input_dim
-        self.hidden_dim = hidden_dim
-        self.node_features = nn.Embedding(self.input_dim,hidden_dim)
+        self.node_features = nn.Embedding(input_dim,hidden_dim)
+        #self.node_features = shared_embedding
         self.num_layers = layers
         self.aggr = nn.ModuleList()
         for index in range(layers):
@@ -121,23 +122,40 @@ class AttentionNet(nn.Module):
         soft = F.softmax(score,dim=0)
         ctx = soft.matmul(encoder_output)
         next_hidden = self.activation(self.linear(torch.cat((hidden, ctx))))
-        return next_hidden
+        return next_hidden,soft
 
 
 class GIN_RNN(nn.Module):
 
-    def __init__(self, input_dim, gnn_hidden, rnn_hidden, vocab_size, layers=5):
+    def __init__(self, input_dim, gnn_hidden, rnn_hidden, vocab_size, layers, siamese=False):
         super(GIN_RNN, self).__init__()
-        self.GIN = GIN(input_dim, gnn_hidden, rnn_hidden, layers)
+        if siamese:
+            self.node_features = nn.Embedding(input_dim[0],gnn_hidden[0])
+            self.siamese = True
+            self.GIN = None
+            self.GINs = nn.ModuleList()
+            self.attentions = nn.ModuleList()
+            self.GINs.append(GIN(input_dim[0], gnn_hidden[0], rnn_hidden, layers[0],self.node_features))
+            self.GINs.append(GIN(input_dim[1], gnn_hidden[1], rnn_hidden, layers[1],self.node_features))
+            self.attentions.append(AttentionNet(rnn_hidden, gnn_hidden[0]))
+            self.attentions.append(AttentionNet(rnn_hidden, gnn_hidden[1]))
+        else:
+            self.siamese = False
+            self.GIN = GIN(input_dim, gnn_hidden, rnn_hidden, layers)
+            self.attention = AttentionNet(rnn_hidden, gnn_hidden)
         self.Decoder = Decoder(vocab_size, hidden_size=rnn_hidden)
-        self.attention = AttentionNet(rnn_hidden, gnn_hidden)
 
-    def forward(self, node_list, adjlist, seq=None):
-        hidden, node_emb = self.GIN(node_list, adjlist)
+    def forward(self, node_list, adjlist, siamese=None, seq=None):
+        if self.siamese:
+            self.GIN = self.GINs[siamese]
+            #self.attention = self.attentions[siamese]
+        graph_emb, node_emb = self.GIN(node_list, adjlist)
         sentence = []
+        hidden = graph_emb
         if seq is not None:
             for word in seq:
-                hidden = self.attention(node_emb, hidden)
+                #hidden,att = self.attention(node_emb, hidden)
+                #hidden = hidden + graph_emb
                 _, pred, hidden = self.Decoder(word, hidden)
                 hidden = hidden.squeeze()
                 sentence.append(pred)
@@ -145,7 +163,8 @@ class GIN_RNN(nn.Module):
             limit = 50
             word = torch.LongTensor([0]).to(DEVICE)
             while limit and word != 1:
-                hidden = self.attention(node_emb, hidden)
+                #hidden,att = self.attention(node_emb, hidden)
+                #hidden = hidden + graph_emb
                 _, pred, hidden = self.Decoder(word, hidden)
                 hidden = hidden.squeeze()
                 word = torch.LongTensor([np.argmax(pred.detach().cpu().numpy())]).to(DEVICE)
@@ -153,15 +172,9 @@ class GIN_RNN(nn.Module):
                 limit -= 1
         return sentence
 
-    def inferring(self, node_list, adjlist):
-        hidden, node_emb = self.GIN(node_list, adjlist)
-        word = torch.LongTensor([0]).to(DEVICE)
-        res = hidden
-        for i in range(5):
-            hidden = self.attention(node_emb, hidden)
-            _, pred, hidden = self.Decoder(word, hidden)
-            hidden = hidden.squeeze()
-            word = torch.LongTensor([np.argmax(pred.detach().cpu().numpy())]).to(DEVICE)
-            res = torch.cat((res, hidden), 0)
-
-        return res.cpu().detach().tolist()
+    def inferring(self, node_list, adjlist, siamese):
+        if self.siamese:
+            self.GIN = self.GINs[siamese]
+            #self.attention = self.attentions[siamese]
+        graph_emb, node_emb = self.GIN(node_list, adjlist)
+        return graph_emb.detach().cpu().numpy()

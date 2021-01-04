@@ -109,10 +109,14 @@ if __name__=='__main__':
                        'pre': {'soft': {}}}}}}}}
     '''
     # py = torch.load('lc-python/'+file_py[0])
-    def draw(file):
-        graph = torch.load(file)
+    def draw(dir, file, lang):
+        graph = torch.load(dir+file)
         graph = reshape_d(graph)
-        plot_model(graph, file[:-3])
+        plot_model(graph, f'tmp/{file[:-4]}')
 
-
-    draw('003_Longest_Substring_Without_Repeating_Characters.py.pth')
+    java_dir = '../lc-dataset/lc-java/'
+    python_dir = '../lc-dataset/lc-python/'
+    for p,j in zip(os.listdir(python_dir),os.listdir(java_dir)):
+        draw(python_dir, p, 'py')
+        draw(java_dir, j, 'java')
+        input()

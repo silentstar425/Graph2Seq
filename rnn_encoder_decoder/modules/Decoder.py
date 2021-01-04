@@ -16,5 +16,5 @@ class Decoder(nn.Module):
         output, hidden_state = self.gru(embedded, hidden.view(1, 1, -1))
         output = output.view(output.size(0), output.size(2))
         linear = self.linear(output)
-        # softmax = self.softmax(linear)
+        #softmax = self.softmax(linear)
         return output, linear, hidden_state
