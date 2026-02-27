@@ -187,3 +187,5 @@ class GIN_RNN(nn.Module):
                 sentence.append(pred)
                 limit -= 1
         return sentence
+
+test2 = "test"
