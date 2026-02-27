@@ -167,25 +167,8 @@ class GIN_RNN(nn.Module):
         self.Decoder = Decoder(vocab_size, hidden_size=rnn_hidden)
         self.attention = AttentionNet(rnn_hidden, gnn_hidden)
 
-    def forward(self, node_list, adjlist, seq=None):
-        hidden, node_emb = self.GIN(node_list, adjlist)
-        sentence = []
-        if seq is not None:
-            for word in seq:
-                hidden = self.attention(node_emb, hidden)
-                _, pred, hidden = self.Decoder(word, hidden)
-                hidden = hidden.squeeze()
-                sentence.append(pred)
-        else:
-            limit = 20
-            word = torch.LongTensor([0]).to(DEVICE)
-            while limit and word != 1:
-                hidden = self.attention(node_emb, hidden)
-                _, pred, hidden = self.Decoder(word, hidden)
-                hidden = hidden.squeeze()
-                word = torch.LongTensor([np.argmax(pred.detach().cpu().numpy())]).to(DEVICE)
-                sentence.append(pred)
-                limit -= 1
-        return sentence
 
 test2 = "test"
+
+def test():
+    print(test2)
