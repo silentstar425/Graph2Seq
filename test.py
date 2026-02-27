@@ -1,2 +1,1 @@
-test = "test"
-print(test)
+test2 = "test"
